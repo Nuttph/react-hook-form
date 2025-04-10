@@ -17,6 +17,7 @@ const AdvanceForm = () => {
   });
 
   const onSubmit = (data) => {
+    console.log("Test on submit")
     console.log("Data Form", data);
     reset()
   };
