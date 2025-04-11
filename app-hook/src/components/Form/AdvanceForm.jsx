@@ -35,9 +35,6 @@ const AdvanceForm = () => {
             id="name"
             {...register("name", {
               required: "กรุณากรอกชื่อ",
-              pattern :{
-                
-              }
             })}
             placeholder="กรอกชื่อ"
             className="border p-2 w-full"
