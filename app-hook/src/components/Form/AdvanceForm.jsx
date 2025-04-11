@@ -12,7 +12,10 @@ const AdvanceForm = () => {
     defaultValues: {
       name: "",
       email: "",
-      bio:''
+      bio:'',
+      category:'',
+      checkbox:[],
+      radio:"",
     },
   });
 
@@ -30,13 +33,25 @@ const AdvanceForm = () => {
           <label htmlFor="name">Name:</label>
           <input
             id="name"
-            {...register("name", { required: "กรุณากรอกชื่อ" })}
+            {...register("name", {
+              required: "กรุณากรอกชื่อ",
+              pattern :{
+                
+              }
+            })}
             placeholder="กรอกชื่อ"
             className="border p-2 w-full"
           />
           {errors.name && (
             <p className="text-red-500 text-sm">{errors.name.message}</p>
           )}
+        </div>
+        <div>
+          <select {...register('category')}>
+            <option value="">Select...</option>
+            <option value="A">Category A</option>
+            <option value="B">Category B</option>
+          </select>
         </div>
         <div>
           <label htmlFor="email">Email:</label>
@@ -76,6 +91,16 @@ const AdvanceForm = () => {
           {errors.bio && <p className="text-red-500">
             {errors.bio.message}
             </p>}
+        </div>
+        <div>
+            <input type="checkbox" value="A" {...register("checkbox")} />
+            <input type="checkbox" value="B" {...register("checkbox")} />
+            <input type="checkbox" value="C" {...register("checkbox")} />
+        </div>
+        <div>
+            <input type="radio" value="A" {...register("radio")} />
+            <input type="radio" value="B" {...register("radio")} />
+            <input type="radio" value="C" {...register("radio")} />
         </div>
         <button>
           send
