@@ -5,6 +5,7 @@ import RegisterPage from './Function/RegisterPage'
 
 import {useDispatch} from "react-redux"
 import {logData} from "../../actions/Counter"
+import Beginner from './Function/Beginner'
 const FormFunction = () => {
   const dispatch = useDispatch();
   return (
@@ -15,6 +16,7 @@ const FormFunction = () => {
         <div className='flex fle-row gap-4 items-center justify-center'>
           <Link className='w-[200px] bg-gray-300 hover:bg-gray-500 duration-300 text-center rounded-md py-1' to={"/create/register"}>register</Link>
           <Link className='w-[200px] bg-gray-300 hover:bg-gray-500 duration-300 text-center rounded-md py-1' to={"/create/article"}>article</Link>
+          <Link className='w-[200px] bg-gray-300 hover:bg-gray-500 duration-300 text-center rounded-md py-1' to={"/create/beginner-form"}>Beginner form</Link>
         </div>
         <div>
           <button
@@ -26,6 +28,7 @@ const FormFunction = () => {
         <Routes>
           <Route path='register' element={<RegisterPage/>}/>
           <Route path='article' element={<ArticlePage/>}/>
+          <Route path='beginner-form' element={<Beginner/>}/>
         </Routes>
       </div>
     </>
