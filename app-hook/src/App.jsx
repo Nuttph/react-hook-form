@@ -3,11 +3,11 @@ import Nav from './components/layout/Nav'
 import Foot from './components/layout/Foot'
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home'
-import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Notfound from './components/layout/Notfound'
 import AboutById from './components/About/AboutById'
 import FormFunction from './components/Form/FormFunction'
+import ShowChart from './components/About/ShowChart'
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <Nav/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
+          <Route path='/chart' element={<ShowChart/>}/>
           <Route path='/about/:id' element={<AboutById/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/create/*' element={<FormFunction/>}/>
