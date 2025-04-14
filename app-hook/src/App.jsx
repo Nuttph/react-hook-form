@@ -7,7 +7,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Notfound from './components/layout/Notfound'
 import AboutById from './components/About/AboutById'
-import SelectForm from './components/Form/SelectForm'
+import FormFunction from './components/Form/FormFunction'
 
 const App = () => {
   return (
@@ -16,10 +16,10 @@ const App = () => {
         <Nav/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/About' element={<About/>}/>
-          <Route path='/About/:id' element={<AboutById/>}/>
-          <Route path='/Contact' element={<Contact/>}/>
-          <Route path='/Create/*' element={<SelectForm/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/about/:id' element={<AboutById/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/create/*' element={<FormFunction/>}/>
           <Route path='*' element={<Notfound />}/>
         </Routes>
       </div>
